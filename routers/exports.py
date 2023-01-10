@@ -23,9 +23,8 @@ query = text(open(path).read())
 
 def authenticate_request(request):
     # Get the Sanctum token from the request headers
-    # token = request.headers.get("Authorization")
+    token = request.headers.get("Authorization")
     # return token
-    return request
 
     # If the token is not present, return an error
     if not token:
